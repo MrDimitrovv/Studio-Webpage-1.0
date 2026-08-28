@@ -1,0 +1,7 @@
+Studio Web Page/
+├── index.html
+├── second-page.html
+├── style.css
+├── background.jpg
+├── logo.jpg
+└── other image files...

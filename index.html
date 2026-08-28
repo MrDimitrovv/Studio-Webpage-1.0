@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Beauty Massage Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Studio Logo" class="header-logo">
+        <h1 id="title">Health and Beauty Massage Studio</h1>
+        
+        <div class="lang-switcher">
+            <button id="langBtn">
+                <img src="flag-icon.png" alt="Language" class="lang-icon">
+                <span class="lang-arrow">▼</span>
+            </button>
+            <div class="lang-menu">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#services" id="servicesNav">Services</a>
+        <a href="#about" id="aboutNav">About</a>
+        <a href="#contact" id="contactNav">Contact</a>
+        <a href="second-page.html" id="moreInfoNav">More Information</a>
+    </nav>
+
+    <div class="container">
+        <!-- Services Section -->
+        <section id="services">
+            <div class="price-section">
+                <h2 id="bodyPartsTitle">Massage</h2>
+                <table class="price-table">
+                    <tr><td id="faceLabel">Face</td><td>20&nbsp;min&nbsp;/&nbsp;20&nbsp;€</td></tr>
+                    <tr class="category-row"><td colspan="2" id="backLabel">Back + neck + shoulders massage</td></tr>
+                    <tr class="sub-row"><td id="armsLabel">Relax</td><td>30 min.<br>30&nbsp;€</td></tr>
+                    <tr class="sub-row"><td id="legsLabel">Therapeutic with cups</td><td>35 min.<br>35&nbsp;€</td></tr>
+                    <tr class="sub-row"><td id="feetLabel">Deep tissue massage with warm volcanic stones</td><td>35 min.<br>35&nbsp;€</td></tr>
+                    <tr class="sub-row"><td id="detoxLabel">Therapeutic with cups and warm volcanic stones</td><td>45 min.<br>40&nbsp;€</td></tr>
+
+                    <tr class="category-row"><td colspan="2" id="anticellLabel">Anti-cellulite (legs + abdomen)</td></tr>
+                    <tr class="sub-row"><td></td><td>30 min.<br>30&nbsp;€</td></tr>
+                    <tr class="sub-row"><td></td><td>45 min.<br>40&nbsp;€</td></tr>
+
+                    <tr class="category-row"><td colspan="2" id="volcanicLabel">Full body massage (back + arms + legs)</td></tr>
+                    <tr class="sub-row"><td id="fullBodyTherapeuticLabel">Therapeutic</td><td>60 min.<br>55&nbsp;€</td></tr>
+                    <tr class="sub-row"><td id="fullBodyRestorativeLabel">Restorative</td><td>70 min.<br>65&nbsp;€</td></tr>
+                </table>
+
+                </table>
+
+                <h2 id="fullBodyTitle">Special Treatments</h2>
+                    <table class="price-table">
+                     <tr><td id="classicLabel">Honey massage (back)</td><td>20 min.<br>30&nbsp;€</td></tr>
+                    <tr><td id="aromaLabel">Zone therapy (foot massage)</td><td>20 min.<br>25&nbsp;€</td></tr>
+                    <tr><td id="volcanicFullLabel">Gift package (full body + feet + face)</td><td>90 min.<br>80&nbsp;€</td></tr>
+                </table>
+
+                <div class="promo-box">
+                    <h3 id="promotionTitle">Promotion</h3>
+                    <table class="promo-table">
+                        <tr><td id="promo3Label">3 treatments of your choice</td><td>-5%</td></tr>
+                        <tr><td id="promo5Label">5 treatments of your choice</td><td>-10%</td></tr>
+                        <tr><td id="promo10Label">10 treatments of your choice</td><td>-20%</td></tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 id="aboutTitle">About Us</h2>
+            <div class="image-container">
+                <img src="about.jpg" alt="About Us" class="about-image" onclick="openImageModal(this)">
+                <div class="protection-overlay"></div>
+            </div>
+            <p id="aboutText">Studio "Health and Beauty" was established in 2015 in the center of Varna by a massage therapist with over 20 years of experience in renowned SPA centers in the Golden Sands resort complex. With us you will receive a professional attitude, high-quality service and an individual approach. We understand that in the hectic everyday life people need a place where they can relax and concentrate on their well-being.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 id="contactTitle">Contact</h2>
+            <div class="contact-info">
+                <div id="therapistName">Vidolina Dimitrova</div>
+                <div id="therapistTitle">Massage Therapist</div>
+                <div class="contact-row">
+                    <img src="phone.png" alt="Phone" class="phone-icon" />
+                    <span id="therapistPhone">+359 896223001</span>
+                </div>
+                <div id="therapistAddress">blvd. General Kolev 16 A, Varna, Bulgaria</div>
+                
+                <!-- Social media buttons with PNG icons -->
+                <div class="social-buttons">
+                    <a href="https://wa.me/359896223001" target="_blank" class="social-btn whatsapp-btn">
+                        <img src="whatsapp.png" alt="WhatsApp" class="social-icon"> 
+                        <span id="whatsappBtnText">WhatsApp</span>
+                    </a>
+                    <a href="https://www.facebook.com/studiozdraveikrasota" target="_blank" class="social-btn facebook-btn">
+                        <img src="facebook.png" alt="Facebook" class="social-icon"> 
+                        <span id="facebookBtnText">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/studiozdraveikrasota/" target="_blank" class="social-btn instagram-btn">
+                        <img src="instagram.png" alt="Instagram" class="social-icon"> 
+                        <span id="instagramBtnText">Instagram</span>
+                    </a>
+                </div>
+                
+                <a id="googleReviewsBtn2" href="https://g.co/kgs/yHLh7Aw" target="_blank">
+                    ★ See our Google Reviews
+                </a>
+                <div class="subtitle-bottom">
+                    <span id="subtitle">Your oasis of calm and relaxation in the center of Varna</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Voucher Section -->
+    <div style="width:100%; text-align:center; margin-bottom:10px;">
+        <div class="image-container">
+            <img src="voucher.jpg" alt="Massage Voucher" class="voucher-image" style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(123,31,162,0.10);">
+            <div class="protection-overlay"></div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        &copy; 2015 Health and Beauty Massage Studio. All rights reserved.
+    </footer>
+
+    <!-- Back to top arrow -->
+    <div class="back-to-top custom-arrow" id="backToTop" title="Back to top"></div>
+
+    <!-- Add modal for enlarged images -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

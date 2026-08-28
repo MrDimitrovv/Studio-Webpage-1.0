@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Information - Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Studio Logo" class="header-logo">
+        <h1 id="title">More Information</h1>
+        
+        <!-- Add the language switcher to second page -->
+        <div class="lang-switcher">
+            <button id="langBtn">
+                <img src="flag-icon.png" alt="Language" class="lang-icon">
+                <span class="lang-arrow">▼</span>
+            </button>
+            <div class="lang-menu">
+                <!-- JavaScript will populate this -->
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" id="homeNav">Return home</a>
+        <a href="#massage-info" id="massageInfoNav">Massage Information</a>
+        <a href="#photos" id="photosNav">Photos</a>
+        <a href="#location" id="locationNav">Location</a>
+    </nav>
+
+    <div class="container">
+        <section id="massage-info">
+            <h2 id="massageInfoTitle">Massage Information</h2>
+            <div id="massageContent" style="color: #7b1fa2; font-size: 1.3em; line-height: 1.7; white-space: pre-line; text-align: justify; max-width: 900px; margin: 0 auto; padding: 0 20px;">
+                What is a massage and what are the best types? We have the answers to your questions about massage therapy. Classic massage involves directly massaging the skin and muscles in the affected area. Five different hand movements are used – stroking the skin, kneading, rubbing, tapping and vibrating. This massage, often referred to as Swedish massage, offers a range of physical and psychological benefits...
+            </div>
+        </section>
+
+        <section id="photos">
+            <h2 id="photosTitle">Photos</h2>
+            <div class="photos-grid">
+                <div class="image-container">
+                    <img src="photo1.jpg" alt="Studio Photo 1" class="gallery-photo" onclick="openImageModal(this)">
+                    <div class="protection-overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="photo2.jpg" alt="Studio Photo 2" class="gallery-photo" onclick="openImageModal(this)">
+                    <div class="protection-overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="photo3.jpg" alt="Studio Photo 3" class="gallery-photo" onclick="openImageModal(this)">
+                    <div class="protection-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location">
+            <h2 id="locationTitle">Location</h2>
+            <div class="location-content">
+                <div class="image-container location-image-container">
+                    <img src="location.png" alt="Studio Location" class="location-image" onclick="openImageModal(this)">
+                </div>
+                <div class="location-info">
+                    <div class="working-hours">
+                        <h3 id="workingHoursTitle">Working Hours</h3>
+                        <p id="workingHoursText">Every day: 09:00 - 19:00
+
+The studio operates by appointment only.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="footer">
+        &copy; 2015 Health and Beauty Massage Studio. All rights reserved.
+    </footer>
+    
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="close-modal" onclick="closeImageModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Back to top arrow -->
+    <div class="back-to-top custom-arrow" id="backToTop" title="Back to top"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
