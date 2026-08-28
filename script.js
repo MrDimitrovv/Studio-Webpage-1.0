@@ -1,7 +1,5 @@
-// Add this to the beginning of script.js for better error handling
 console.log('Script loading...');
 
-// Language translations
 const translations = {
     en: {
         title: "Health and Beauty Massage Studio",
@@ -220,16 +218,12 @@ Vulkanstein-Massage ist ein einzigartiges Erlebnis, das die Vorteile von Wärme 
 
 let currentLang = 'en';
 
-// Function to check if we're on the second page
 function isSecondPage() {
     return window.location.pathname.includes('second-page.html');
 }
 
-// Function to update all text content
 function updateLanguage(lang) {
     const t = translations[lang];
-    
-    // Update navigation buttons
     const updateNavElement = (id, key) => {
         const element = document.getElementById(id);
         if (element && t[key]) {
@@ -238,21 +232,18 @@ function updateLanguage(lang) {
     };
     
     if (isSecondPage()) {
-        // Second page navigation
         updateNavElement('homeNav', 'homeNav');
         updateNavElement('massageInfoNav', 'massageInfo');
         updateNavElement('photosNav', 'photos');
         updateNavElement('locationNav', 'location');
         updateNavElement('backToMainNav', 'backToMain');
     } else {
-        // Main page navigation
         updateNavElement('servicesNav', 'services');
         updateNavElement('aboutNav', 'about');
         updateNavElement('contactNav', 'contact');
         updateNavElement('moreInfoNav', 'moreInfo');
     }
     
-    // Update all page elements
     const updateElement = (id, key) => {
         const element = document.getElementById(id);
         if (element && t[key]) {
@@ -260,7 +251,6 @@ function updateLanguage(lang) {
         }
     };
     
-    // Special handling for massage content (preserve formatting)
     const massageContent = document.getElementById('massageContent');
     if (massageContent && t.massageContent) {
         massageContent.textContent = t.massageContent;
@@ -302,16 +292,28 @@ function updateLanguage(lang) {
     updateElement('therapistAddress', 'therapistAddress');
     updateElement('googleReviewsBtn2', 'googleReviewsBtn2');
     
-    // Update social media buttons
     updateElement('whatsappBtnText', 'whatsappBtn');
     updateElement('facebookBtnText', 'facebookBtn');
     updateElement('instagramBtnText', 'instagramBtn');
     
-    // Store language preference
     localStorage.setItem('preferredLanguage', lang);
+    
+    if (lang === 'bg') {
+        updatePriceMinutes('мин.');
+    } else {
+        updatePriceMinutes('min.');
+    }
 }
 
-// Enhanced modal functions for all images except location
+function updatePriceMinutes(replacement) {
+    document.querySelectorAll('.price-table td').forEach(cell => {
+        const content = cell.textContent;
+        if (content.includes('min.') || content.includes('мín.')) {
+            cell.textContent = content.replace(/мín\.|min\./g, replacement);
+        }
+    });
+}
+
 function openImageModal(img) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
@@ -320,7 +322,6 @@ function openImageModal(img) {
         modal.style.display = 'block';
         modalImg.src = img.src;
         
-        // Add protection to modal image
         modalImg.style.userSelect = 'none';
         modalImg.style.webkitUserSelect = 'none';
         modalImg.style.mozUserSelect = 'none';
@@ -331,13 +332,11 @@ function openImageModal(img) {
         modalImg.style.oUserDrag = 'none';
         modalImg.style.webkitTouchCallout = 'none';
         
-        // Prevent right-click on modal image
         modalImg.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             return false;
         });
         
-        // Prevent dragging
         modalImg.addEventListener('dragstart', function(e) {
             e.preventDefault();
             return false;
@@ -352,13 +351,11 @@ function closeImageModal() {
     }
 }
 
-// Back to top functionality
 function initializeBackToTop() {
     const backToTopBtn = document.getElementById('backToTop');
     
     if (!backToTopBtn) return;
     
-    // Show/hide button based on scroll position
     function toggleBackToTopButton() {
         if (window.pageYOffset > 300) {
             backToTopBtn.classList.add('visible');
@@ -367,7 +364,6 @@ function initializeBackToTop() {
         }
     }
     
-    // Smooth scroll to top
     function scrollToTop() {
         window.scrollTo({
             top: 0,
@@ -375,17 +371,13 @@ function initializeBackToTop() {
         });
     }
     
-    // Event listeners
     window.addEventListener('scroll', toggleBackToTopButton);
     backToTopBtn.addEventListener('click', scrollToTop);
     
-    // Initial check
     toggleBackToTopButton();
 }
 
-// Image protection functionality
 function initializeImageProtection() {
-    // Disable right-click on images (exclude location image and background)
     document.addEventListener('contextmenu', function(e) {
         if ((e.target.tagName === 'IMG' && 
              !e.target.classList.contains('location-image') && 
@@ -398,7 +390,6 @@ function initializeImageProtection() {
         }
     }, false);
     
-    // Disable drag and drop on images (exclude location image and background)
     document.addEventListener('dragstart', function(e) {
         if (e.target.tagName === 'IMG' && 
             !e.target.classList.contains('location-image') && 
@@ -408,7 +399,6 @@ function initializeImageProtection() {
         }
     }, false);
     
-    // Disable text selection on images (exclude location image and background)
     document.addEventListener('selectstart', function(e) {
         if ((e.target.tagName === 'IMG' && 
              !e.target.classList.contains('location-image') && 
@@ -420,31 +410,25 @@ function initializeImageProtection() {
         }
     }, false);
     
-    // Enhanced keyboard protection
     document.addEventListener('keydown', function(e) {
-        // Disable Ctrl+S (Save), Ctrl+P (Print), Ctrl+A (Select All)
         if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 80 || e.keyCode === 65)) {
             e.preventDefault();
             return false;
         }
-        // Disable F12 (Developer Tools)
         if (e.keyCode === 123) {
             e.preventDefault();
             return false;
         }
-        // Disable Ctrl+Shift+I (Developer Tools)
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
             e.preventDefault();
             return false;
         }
-        // Disable Ctrl+U (View Source)
         if (e.ctrlKey && e.keyCode === 85) {
             e.preventDefault();
             return false;
         }
     }, false);
     
-    // Hide protected images when developer tools are detected
     let devtools = {
         open: false,
         orientation: null
@@ -473,19 +457,15 @@ function initializeImageProtection() {
     }, 500);
 }
 
-// Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     const langBtn = document.getElementById('langBtn');
     const langMenu = document.querySelector('.lang-menu');
     
-    // Load saved language preference
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     
     if (langBtn && langMenu) {
-        // Clear existing menu items and create new ones
         langMenu.innerHTML = '';
         
-        // Add language options
         const languages = [
             { code: 'en', name: 'English' },
             { code: 'bg', name: 'Български' },
@@ -503,13 +483,11 @@ document.addEventListener('DOMContentLoaded', function() {
             langMenu.appendChild(option);
         });
         
-        // Language button click handler
         langBtn.addEventListener('click', function(e) {
             e.stopPropagation();
             langMenu.classList.toggle('active');
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             if (!langBtn.contains(event.target) && !langMenu.contains(event.target)) {
                 langMenu.classList.remove('active');
@@ -517,20 +495,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Apply saved language
     updateLanguage(savedLang);
-    
-    // Initialize back to top button
     initializeBackToTop();
-    
-    // Initialize image protection
     initializeImageProtection();
     
-    // Add console warning
     console.log('%c⚠️ WARNING ⚠️', 'color: red; font-size: 20px; font-weight: bold;');
     console.log('%cImages on this website are protected by copyright. Unauthorized downloading or use is prohibited.', 'color: red; font-size: 14px;');
-    
-    console.log('All features initialized');
 });
-
-console.log('Script loaded successfully');
