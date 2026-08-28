@@ -118,7 +118,7 @@ Volcanic stone massage is a unique experience that combines the benefits of heat
         whatsappBtn: "WhatsApp",
         facebookBtn: "Facebook",
         instagramBtn: "Instagram",
-        massageInfoTitle: "Информация за масажи",
+        minAbbr: "мін.",
         massageContent: `Какво е масажът и кои са най-добрите видове? Имаме отговорите на вашите въпроси относно масажната терапия. Класическият масаж включва директно масажиране на кожата и мускулите в засегнатата област. Използват се пет различни ръчни движения – галене на кожата, месене, триене, потупване и вибрация. Този масаж, често наричан шведски масаж, предлага широк спектър от физически и психологически ползи. Той може да подобри кръвообращението, да намали мускулната скованост и болка и да увеличи гъвкавостта. Освен това насърчава релаксацията, намалява стреса и тревожността и може да подобри качеството на съня.
 
 Физически ползи:
@@ -189,7 +189,7 @@ Volcanic stone massage is a unique experience that combines the benefits of heat
         whatsappBtn: "WhatsApp",
         facebookBtn: "Facebook",
         instagramBtn: "Instagram",
-        massageInfoTitle: "Massage-Informationen",
+        minAbbr: "Min.",
         massageContent: `Was ist eine Massage und welche sind die besten Arten? Wir haben die Antworten auf Ihre Fragen zur Massagetherapie. Die klassische Massage beinhaltet die direkte Massage der Haut und Muskeln im betroffenen Bereich. Fünf verschiedene Handbewegungen werden verwendet – Streichen der Haut, Kneten, Reiben, Klopfen und Vibrieren. Diese Massage, oft als schwedische Massage bezeichnet, bietet eine Reihe von körperlichen und psychologischen Vorteilen. Sie kann die Durchblutung verbessern, Muskelsteifheit und Schmerzen reduzieren und die Flexibilität erhöhen. Zusätzlich fördert sie die Entspannung, reduziert Stress und Angst und kann die Schlafqualität verbessern.
 
 Körperliche Vorteile:
@@ -298,19 +298,9 @@ function updateLanguage(lang) {
     
     localStorage.setItem('preferredLanguage', lang);
     
-    if (lang === 'bg') {
-        updatePriceMinutes('мин.');
-    } else {
-        updatePriceMinutes('min.');
-    }
-}
-
-function updatePriceMinutes(replacement) {
+    const minAbbr = translations[lang].minAbbr;
     document.querySelectorAll('.price-table td').forEach(cell => {
-        const content = cell.textContent;
-        if (content.includes('min.') || content.includes('мín.')) {
-            cell.textContent = content.replace(/мín\.|min\./g, replacement);
-        }
+        cell.textContent = cell.textContent.replace(/мín\.|min\.|Min\./g, minAbbr);
     });
 }
 
