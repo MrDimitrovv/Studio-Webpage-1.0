@@ -214,6 +214,62 @@ nav a:hover, nav a:focus {
     border-bottom: none; /* Remove border from last row */
 }
 
+/* Category header rows (grouping treatment variants) */
+.price-table tr.category-row td {
+    text-align: left;
+    padding-top: 16px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ff1493;
+    border-bottom: 1.5px solid rgba(255, 20, 147, 0.25);
+}
+
+/* Indented variant rows under a category header */
+.price-table tr.sub-row td:first-child {
+    padding-left: 22px;
+    font-weight: 600;
+}
+
+.price-table tr.sub-row td:last-child {
+    font-weight: bold;
+}
+
+/* Promotion callout box */
+.promo-box {
+    margin-top: 22px;
+    background: rgba(255, 20, 147, 0.08);
+    border: 1.5px solid rgba(255, 20, 147, 0.3);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+#promotionTitle {
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ff1493;
+    font-weight: bold;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.promo-table {
+    width: 100%;
+    color: #7b1fa2;
+    font-weight: bold;
+}
+
+.promo-table td {
+    padding: 5px 8px;
+}
+
+.promo-table td:last-child {
+    text-align: right;
+    color: #ff1493;
+    white-space: nowrap;
+}
+
 #bodyPartsTitle,
 #fullBodyTitle {
     font-size: 2rem;
@@ -766,7 +822,15 @@ nav a:hover, nav a:focus {
     .price-table td {
         padding: 6px 8px;
     }
-    
+
+    .price-table tr.sub-row td:first-child {
+        padding-left: 14px;
+    }
+
+    .promo-box {
+        padding: 12px 14px;
+    }
+
     /* Mobile-specific fix for better text visibility */
     .price-section {
         background: rgba(255, 255, 255, 0.85) !important; /* More opaque background on mobile */
@@ -777,6 +841,10 @@ nav a:hover, nav a:focus {
     .price-table {
         color: #4a0e4e !important; /* Darker purple for better contrast */
         font-weight: 900 !important; /* Bolder text */
+    }
+
+    .price-table tr.category-row td {
+        color: #c2185b !important; /* Keep headers accented on mobile */
     }
     
     #bodyPartsTitle,
