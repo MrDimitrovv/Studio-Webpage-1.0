@@ -297,11 +297,6 @@ function updateLanguage(lang) {
     updateElement('instagramBtnText', 'instagramBtn');
     
     localStorage.setItem('preferredLanguage', lang);
-    
-    const minAbbr = translations[lang].minAbbr;
-    document.querySelectorAll('.price-table td').forEach(cell => {
-        cell.textContent = cell.textContent.replace(/мín\.|min\.|Min\./g, minAbbr);
-    });
 }
 
 function openImageModal(img) {
