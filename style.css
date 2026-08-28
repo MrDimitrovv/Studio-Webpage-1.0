@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Apply Palatino font globally - place this at the very top */
 * {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
@@ -936,4 +937,1128 @@ nav a:hover, nav a:focus {
     .price-table {
         color: #3a0a3e !important; /* Even darker purple for maximum contrast */
     }
+=======
+/* Apply Palatino font globally - place this at the very top */
+* {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* Single body declaration with all necessary properties */
+body {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    position: relative;
+    min-height: 90px;
+    padding: 12px 32px 8px 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 2px 12px rgba(123,31,162,0.06);
+    z-index: 20;
+}
+
+.header-logo {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    height: 100px;
+    width: auto;
+    max-width: 190px;
+    border-radius: 12px;
+    opacity: 0.92;
+    background: transparent;
+    box-shadow: none;
+    z-index: 30;
+    pointer-events: none;
+    object-fit: contain;
+    display: block;
+}
+
+/* Title styles */
+h1#title {
+    font-size: 3rem;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #820fe0;
+    text-align: center;
+    margin: 1.5rem auto 0.5rem auto;
+    width: 100%;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Language switcher */
+.lang-switcher {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    z-index: 10;
+}
+
+#langBtn {
+    background: rgba(255, 255, 255, 0.7);
+    color: #7b1fa2;
+    border: 2px solid #ff1493;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+#langBtn .lang-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.lang-arrow {
+    font-size: 1.3em;
+    color: #7b1fa2;
+    margin-left: 2px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: rgba(255,255,255,0.75);
+    border: 1.5px solid #ff1493;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(123,31,162,0.10);
+    min-width: 160px;
+    z-index: 100;
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.lang-menu div {
+    padding: 12px 18px;
+    cursor: pointer;
+    color: #7b1fa2;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.lang-menu div:hover {
+    background: #f8bbd0;
+    color: #ff1493;
+}
+
+.lang-menu.active {
+    display: flex;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 32px 0 24px 0;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: bold;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #7b1fa2;
+    background: rgba(248, 187, 208, 0.75);
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(123,31,162,0.06);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    border: 1.5px solid #e1bee7;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+nav a:hover, nav a:focus {
+    background: #f8bbd0;
+    color: #ff1493;
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+}
+
+/* Container */
+.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Price section - TRANSPARENT background */
+.price-section {
+    background: rgba(255, 255, 255, 0.08); /* Made very transparent */
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 500px;
+    margin: 0 auto 32px auto;
+    box-shadow: 0 2px 8px rgba(123,31,162,0.08);
+    backdrop-filter: blur(15px); /* Increased blur for better text visibility */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border for definition */
+}
+
+.price-table {
+    width: 100%;
+    color: #7b1fa2;
+    font-size: 1.08em;
+    margin-bottom: 18px;
+    font-weight: bold; /* Make text bolder for better visibility */
+}
+
+.price-table td {
+    padding: 8px 12px; /* Add padding for better spacing */
+    border-bottom: 1px solid rgba(123, 31, 162, 0.1); /* Subtle separators */
+}
+
+.price-table td:last-child {
+    white-space: nowrap; /* Prevents line breaks in price cells */
+    text-align: right;
+}
+
+.price-table tr:last-child td {
+    border-bottom: none; /* Remove border from last row */
+}
+
+/* Category header rows (grouping treatment variants) */
+.price-table tr.category-row td {
+    text-align: left;
+    padding-top: 16px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ff1493;
+    border-bottom: 1.5px solid rgba(255, 20, 147, 0.25);
+}
+
+/* Indented variant rows under a category header */
+.price-table tr.sub-row td:first-child {
+    padding-left: 22px;
+    font-weight: 600;
+}
+
+.price-table tr.sub-row td:last-child {
+    font-weight: bold;
+}
+
+/* Promotion callout box */
+.promo-box {
+    margin-top: 22px;
+    background: rgba(255, 20, 147, 0.08);
+    border: 1.5px solid rgba(255, 20, 147, 0.3);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+#promotionTitle {
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ff1493;
+    font-weight: bold;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+.promo-table {
+    width: 100%;
+    color: #7b1fa2;
+    font-weight: bold;
+}
+
+.promo-table td {
+    padding: 5px 8px;
+}
+
+.promo-table td:last-child {
+    text-align: right;
+    color: #ff1493;
+    white-space: nowrap;
+}
+
+#bodyPartsTitle,
+#fullBodyTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff1493;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+/* About section */
+#about {
+    text-align: center;
+    margin: 32px auto;
+    padding: 20px;
+}
+
+#aboutTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff1493;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+#aboutText {
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #7b1fa2;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+    font-weight: normal;
+}
+
+.about-image {
+    display: block;
+    max-width: 340px;
+    width: 100%;
+    border: 4px solid #7b1fa2;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+/* Contact section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px 0 24px 0;
+}
+
+/* Add Contact title styling to match other headers */
+#contactTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff1493;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 18px 32px;
+    box-shadow: 0 2px 8px rgba(123,31,162,0.06);
+    text-align: center;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #7b1fa2;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-info a {
+    margin-top: 10px;
+    color: #fff;
+    background: rgba(255, 20, 147, 0.9);
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.subtitle-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0 0 0;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 1.15em;
+    color: #7b1fa2;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Footer */
+#footer {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #111;
+    text-align: right;
+    padding: 0 24px 12px 0;
+    margin: 0;
+}
+
+/* Voucher button */
+.voucher-bottom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.voucher-bottom img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0.9;
+}
+
+.voucher-bottom:hover {
+    transform: scale(1.1);
+}
+
+.voucher-bottom:hover img {
+    opacity: 1;
+}
+
+/* Back to top arrow */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 20, 147, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: rgba(255, 20, 147, 1);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+}
+
+.back-to-top.custom-arrow::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid white;
+    margin-bottom: 2px;
+}
+
+/* Working hours section - centered and improved */
+.working-hours {
+    background: rgba(248, 187, 208, 0.65);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 16px rgba(123,31,162,0.12);
+    border: 2px solid #e1bee7;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#workingHoursTitle {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 15px;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-align: center;
+}
+
+#workingHoursText {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #7b1fa2;
+    margin: 0;
+    white-space: pre-line;
+    text-align: center;
+    line-height: 1.6;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+/* Second page styles */
+#massageInfoTitle,
+#photosTitle,
+#locationTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff1493;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+.photos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-photo {
+    width: 300px;
+    height: 225px;
+    object-fit: cover;
+    border: 4px solid #7b1fa2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(123,31,162,0.15);
+    cursor: pointer;
+}
+
+/* Location section layout fixes */
+.location-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.location-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.location-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 4px solid #7b1fa2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(123,31,162,0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.location-image:hover {
+    transform: scale(1.02);
+}
+
+.location-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image modal */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.close-modal:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/* Add these missing styles */
+
+/* Image protection styles */
+.image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.protection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Watermark for protected images */
+.image-container:not(.location-image-container)::after {
+    content: "© Studio Health & Beauty";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 10;
+    white-space: nowrap;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif !important;
+}
+
+/* Contact row styling */
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.phone-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Section duration styling for price lists */
+.section-duration {
+    font-size: 0.8em;
+    color: #ff1493;
+    opacity: 0.8;
+    font-weight: normal;
+}
+
+/* Social media buttons */
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0 10px 0;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent !important;
+    color: #7b1fa2 !important; /* Force purple color with !important */
+}
+
+/* Add styles for the social media icons */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Add hover effect for social buttons with blur */
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(123, 31, 162, 0.1);
+}
+
+/* Specific hover colors for each social media button */
+.whatsapp-btn:hover {
+    color: #25D366 !important; /* WhatsApp green */
+}
+
+.facebook-btn:hover {
+    color: #1877F2 !important; /* Facebook blue */
+}
+
+.instagram-btn:hover {
+    color: #E4405F !important; /* Instagram pink */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        padding: 10px 15px;
+        min-height: 120px; /* Increased height for better spacing */
+    }
+    
+    .header-logo {
+        height: 70px;
+        max-width: 140px;
+        top: 8px;
+        left: 10px;
+    }
+    
+    /* Language switcher positioning fix */
+    .lang-switcher {
+        top: 8px;
+        right: 10px;
+        z-index: 50;
+    }
+    
+    #langBtn {
+        padding: 4px 8px;
+        font-size: 0.9em;
+    }
+    
+    #langBtn .lang-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* Title spacing fix to avoid language button overlap */
+    h1#title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin: 1.8rem auto 0.5rem auto; /* Increased top margin */
+        padding: 0 60px; /* Add padding to avoid language button */
+        line-height: 1.2;
+    }
+    
+    /* Navigation fixes for better visibility */
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 20px 0;
+        padding: 0 10px;
+        justify-content: center;
+    }
+    
+    nav a {
+        font-size: 0.95em;
+        padding: 10px 16px;
+        flex: 1;
+        min-width: 120px;
+        max-width: 150px;
+        text-align: center;
+        background: rgba(248, 187, 208, 0.9); /* More opaque for better visibility */
+        border: 2px solid #e1bee7;
+        box-shadow: 0 3px 10px rgba(123,31,162,0.15); /* Stronger shadow */
+    }
+    
+    nav a:hover {
+        background: #f8bbd0;
+        transform: translateY(-1px) scale(1.02);
+    }
+    
+    /* Social media buttons */
+    .social-buttons {
+        gap: 8px;
+        margin: 10px 0;
+    }
+    
+    .social-btn {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .contact-info {
+        padding: 15px 20px;
+        font-size: 0.95em;
+    }
+    
+    .price-table {
+        font-size: 1em;
+    }
+    
+    .price-table td {
+        padding: 6px 8px;
+    }
+
+    .price-table tr.sub-row td:first-child {
+        padding-left: 14px;
+    }
+
+    .promo-box {
+        padding: 12px 14px;
+    }
+
+    /* Mobile-specific fix for better text visibility */
+    .price-section {
+        background: rgba(255, 255, 255, 0.22) !important; /* Keep the background blur visible on mobile */
+        border: 2px solid rgba(123, 31, 162, 0.3) !important; /* Stronger border */
+        box-shadow: 0 4px 15px rgba(123,31,162,0.2) !important; /* Stronger shadow */
+    }
+    
+    .price-table {
+        color: #4a0e4e !important; /* Darker purple for better contrast */
+        font-weight: 900 !important; /* Bolder text */
+    }
+
+    .price-table tr.category-row td {
+        color: #c2185b !important; /* Keep headers accented on mobile */
+    }
+    
+    #bodyPartsTitle,
+    #fullBodyTitle {
+        color: #c2185b !important; /* Darker pink for headers */
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8) !important; /* White text shadow for contrast */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header adjustments for very small screens */
+    header {
+        padding: 8px 10px;
+        min-height: 110px;
+    }
+    
+    .header-logo {
+        height: 60px;
+        max-width: 120px;
+        top: 6px;
+        left: 8px;
+    }
+    
+    /* Language switcher for small screens */
+    .lang-switcher {
+        top: 6px;
+        right: 8px;
+    }
+    
+    #langBtn {
+        padding: 3px 6px;
+        font-size: 0.8em;
+    }
+    
+    #langBtn .lang-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Title adjustments */
+    h1#title {
+        font-size: 1.6rem;
+        margin: 1.5rem auto 0.4rem auto;
+        padding: 0 50px; /* Adjust padding for smaller screens */
+    }
+    
+    /* Navigation for very small screens */
+    nav {
+        gap: 6px;
+        margin: 15px 0;
+        padding: 0 5px;
+    }
+    
+    nav a {
+        font-size: 0.9em;
+        padding: 8px 12px;
+        min-width: 100px;
+        max-width: 140px;
+        background: rgba(248, 187, 208, 0.95); /* Even more opaque */
+    }
+    
+    .social-btn {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        gap: 4px;
+    }
+    
+    .social-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .contact-info {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+    
+    #aboutText {
+        font-size: 1.1em;
+        padding: 0 15px;
+    }
+    
+    /* Additional mobile-specific visibility fixes for very small screens */
+    .price-section {
+        background: rgba(255, 255, 255, 0.22) !important; /* Keep the background blur visible on small screens */
+        border: 2px solid rgba(123, 31, 162, 0.4) !important;
+    }
+    
+    .price-table {
+        color: #3a0a3e !important; /* Even darker purple for maximum contrast */
+    }
+}
+
+/* Flexible layout foundation */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+}
+
+.price-section,
+.contact-info,
+.working-hours {
+    width: 100%;
+}
+
+.price-table,
+.promo-table {
+    table-layout: fixed;
+    overflow-wrap: anywhere;
+}
+
+.price-table td,
+.promo-table td {
+    overflow-wrap: anywhere;
+}
+
+.price-table td:last-child,
+.promo-table td:last-child {
+    width: 31%;
+}
+
+.about-image,
+.gallery-photo,
+.location-image,
+.modal-content {
+    max-width: 100%;
+}
+
+.photos-grid,
+.location-content {
+    width: 100%;
+}
+
+.image-container {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        min-height: 0;
+        padding: 82px 12px 14px;
+    }
+
+    h1#title {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: clamp(1.55rem, 7vw, 2rem);
+        overflow-wrap: anywhere;
+    }
+
+    nav {
+        width: 100%;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    nav a {
+        flex: 1 1 140px;
+        min-width: 0;
+        max-width: none;
+        padding: 10px 12px;
+        overflow-wrap: anywhere;
+    }
+
+    .price-section {
+        padding: 16px 12px;
+    }
+
+    .price-table,
+    .promo-table {
+        font-size: clamp(0.86rem, 3.6vw, 1rem);
+    }
+
+    .price-table td,
+    .promo-table td {
+        padding: 6px 4px;
+    }
+
+    .price-table tr.sub-row td:first-child {
+        padding-left: 10px;
+    }
+
+    .photos-grid {
+        gap: 12px;
+        padding: 0 10px;
+    }
+
+    .gallery-photo {
+        width: min(100%, 300px);
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .location-content {
+        padding: 0 10px;
+    }
+
+    #about,
+    #massageContent {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #aboutText,
+    #massageContent {
+        overflow-wrap: anywhere;
+    }
+
+    .contact-info {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .contact-row {
+        flex-wrap: wrap;
+    }
+
+    .social-buttons {
+        width: 100%;
+    }
+
+    .social-btn {
+        flex: 1 1 110px;
+        justify-content: center;
+        min-width: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .voucher-image {
+        display: block;
+        width: 100%;
+    }
+
+    #footer {
+        padding: 0 12px 12px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .back-to-top {
+        bottom: 16px;
+        left: 12px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Keep the price list translucent so the background blur remains visible on mobile. */
+@media (max-width: 769px) {
+    .price-section {
+        background: rgba(255, 255, 255, 0.22) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+>>>>>>> 042100d (Fix responsive mobile layout)
 }
