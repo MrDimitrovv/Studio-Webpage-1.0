@@ -297,6 +297,16 @@ function updateLanguage(lang) {
     updateElement('instagramBtnText', 'instagramBtn');
     
     localStorage.setItem('preferredLanguage', lang);
+    
+    if (lang === 'bg') {
+        document.querySelectorAll('.price-table td').forEach(cell => {
+            cell.textContent = cell.textContent.replace(/мин\.|min\./g, 'мин.');
+        });
+    } else {
+        document.querySelectorAll('.price-table td').forEach(cell => {
+            cell.textContent = cell.textContent.replace(/мин\.|min\./g, 'min.');
+        });
+    }
 }
 
 function openImageModal(img) {
